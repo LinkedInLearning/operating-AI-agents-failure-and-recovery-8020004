@@ -8,7 +8,7 @@ Goal:
 
 Prereqs:
   pip install deepdiff
-  python assess.py --snapshots 00_03_e/snapshot --current 00_03_e/out/shopping_summary.json
+  python assess.py --snapshots 00_03_b/snapshot --current 00_03_b/out/shopping_summary.json
 
 Notes:
 - This script assumes your snapshots folder contains JSON snapshots of the SAME file
@@ -21,8 +21,7 @@ import json
 import os
 from typing import Any, Dict, Optional, Tuple
 
-from deepdiff import DeepDiff
-
+#TODO: Import Deep Diff 
 
 # -----------------------------
 # File helpers
@@ -48,7 +47,9 @@ def find_latest_snapshot(snapshots_dir: str) -> str:
     if not candidates:
         raise FileNotFoundError(f"No .json snapshots found in: {snapshots_dir}")
 
-    candidates.sort(key=lambda p: os.path.getmtime(p), reverse=True)
+    #TODO: Find the most recent snapshot file sorting the list of file paths (ie candidates) 
+    #      so the most recently modified file comes first.
+
     return candidates[0]
 
 
@@ -135,7 +136,7 @@ def main() -> None:
     parser.add_argument("--current", required=True, help="Current output JSON path (e.g., shopping_summary.json)")
     parser.add_argument(
         "--report",
-        default="00_03_e/impact/impact_report.json",
+        default="00_03_b/impact/impact_report.json",
         help="Where to write the impact report JSON (default: impact_report.json in CWD)",
     )
     parser.add_argument(
@@ -150,7 +151,7 @@ def main() -> None:
     after_obj = load_json(args.current)
 
     dd = DeepDiff(before_obj, after_obj, ignore_order=bool(args.ignore_order))
-    impact = summarize_deepdiff(dd)
+    #TODO: summarize the differences and store in the impact variable
 
     print("\n=== Failure Impact (Blast Radius) ===")
     print(f"Snapshot used: {snapshot_path}")
