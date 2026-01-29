@@ -63,7 +63,7 @@ def quarantine_file(
     if not os.path.exists(output_path):
         return None
 
-    os.makedirs(quarantine_dir, exist_ok=True)
+    # TODO: create a quarantine directory
     base = os.path.basename(output_path)
     ts = utc_now_compact()
     quarantined_name = f"{base}.quarantine.{reason}.{ts}.json"
@@ -76,7 +76,7 @@ def quarantine_file(
 def restore_snapshot(snapshot_path: str, output_path: str) -> None:
     # Overwrite the output with the known-good snapshot
     os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
-    shutil.copy2(snapshot_path, output_path)
+    # TODO Restore the output file to a known-good snapshot
 
 # -----------------------------
 # Lightweight action log
@@ -114,10 +114,10 @@ def main() -> None:
         )
 
     # Quarantine the unsafe file
-    quarantined_path = quarantine_file(args.output, args.quarantine, reason="sensitive_leak")
+    #TODO Quarantine using the quarantine_file function
 
     # Restore snapshot into output_path (rollback)
-    restore_snapshot(snapshot_path, args.output)
+    # TODO Restore using the restore_snapshot function
 
     # Log the recovery action (lightweight transaction log)
     append_action_log(
