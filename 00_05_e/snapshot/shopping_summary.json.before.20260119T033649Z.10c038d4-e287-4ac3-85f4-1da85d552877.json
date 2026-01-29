@@ -1,5 +1,5 @@
 {
-  "input_file": "c2-lesson5-validate-recovery-outcomes/data/shopping_notes.txt",
+  "input_file": "00_05_e/data/shopping_notes.txt",
   "budget": "$180 total",
   "key_needs": [
     "Chicken breast (2 lbs) or turkey if cheaper",
@@ -24,6 +24,6 @@
     "Substitution approval via kesha.williams@example.com"
   ],
   "summary": "Shopping notes for weekly household order.",
-  "output_file": "c2-lesson5-validate-recovery-outcomes/out/shopping_summary.json",
+  "output_file": "00_05_e/out/shopping_summary.json",
   "created_at": "2026-01-19T03:36:17.456832+00:00"
 }

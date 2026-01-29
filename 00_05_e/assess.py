@@ -8,8 +8,8 @@ Goal:
 
 Prereqs:
   pip install deepdiff
-  python assess_failure_impact.py \
-    --snapshots 00_05_e/snapshots \
+  python assess.py \
+    --snapshots 00_05_e/snapshot \
     --current 00_05_e/out/shopping_summary.json
 
 Notes:

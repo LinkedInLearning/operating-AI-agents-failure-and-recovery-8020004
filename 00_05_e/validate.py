@@ -7,11 +7,7 @@ Goal:
 - Confirm outputs meet basic integrity constraints (schema + sensitive scan)
 
 Usage:
-  python validate_recovery.py \
-    --output c2-lesson4-implement-agent-recovery/out/shopping_summary.json \
-    --snapshot c2-lesson4-implement-agent-recovery/snapshot \
-    --action-log c2-lesson4-implement-agent-recovery/action_log.jsonl \
-    --quarantine c2-lesson4-implement-agent-recovery/quarantine
+  python validate.py --output 00_05_e/out/shopping_summary.json --snapshot 00_05_e/snapshot --action-log 00_05_e/action_log.jsonl 
 
 Notes:
 - If you pass --baseline, we validate against that exact snapshot file.

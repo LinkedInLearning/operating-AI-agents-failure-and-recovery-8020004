@@ -25,10 +25,10 @@
       ],
       "data_access": {
         "reads": [
-          "c2-lesson5-validate-recovery-outcomes/data/shopping_notes.txt"
+          "00_05_e/data/shopping_notes.txt"
         ],
         "writes": [
-          "c2-lesson5-validate-recovery-outcomes/out/shopping_summary.json"
+          "00_05_e/out/shopping_summary.json"
         ]
       },
       "requires_human_review": false,
