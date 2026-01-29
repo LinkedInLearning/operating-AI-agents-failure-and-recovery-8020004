@@ -37,7 +37,7 @@ client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-BASE_DIR = "c2-lesson4-implement-agent-recovery"
+BASE_DIR = "00_04_e"
 DATA_DIR = f"{BASE_DIR}/data"
 OUT_DIR = f"{BASE_DIR}/out"
 LOG_DIR = f"{BASE_DIR}/logs"

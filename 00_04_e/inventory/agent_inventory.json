@@ -25,10 +25,10 @@
       ],
       "data_access": {
         "reads": [
-          "c2-lesson4-implement-agent-recovery/data/shopping_notes.txt"
+          "00_04_e/data/shopping_notes.txt"
         ],
         "writes": [
-          "c2-lesson4-implement-agent-recovery/out/shopping_summary.json"
+          "00_04_e/out/shopping_summary.json"
         ]
       },
       "requires_human_review": false,
