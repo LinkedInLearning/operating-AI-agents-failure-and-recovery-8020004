@@ -8,11 +8,11 @@ Goal:
   3) restore a prior known-good snapshot
 
 Usage:
-  python recover_output.py \
-    --output c2-lesson1-trigger-bad-agent-action/out/shopping_summary.json \
-    --snapshots c2-lesson3-assess-failure-impact/snapshot \
-    --quarantine c2-lesson4-implement-agent-recovery/quarantine \
-    --actionlog c2-lesson4-implement-agent-recovery/action_log.jsonl
+  python rollback.py \
+    --output 00_05_e/out/shopping_summary.json \
+    --snapshots 00_05_e/snapshot \
+    --quarantine 00_05_e/quarantine \
+    --actionlog 00_05_e/action_log.jsonl
 
 Notes:
 - This is intentionally simple and file-based.
