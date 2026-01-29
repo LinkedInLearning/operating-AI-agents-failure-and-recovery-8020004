@@ -7,7 +7,7 @@ Goal:
 - Confirm outputs meet basic integrity constraints (schema + sensitive scan)
 
 Usage:
-  python validate.py --output 00_05_e/out/shopping_summary.json --snapshot 00_05_e/snapshot --action-log 00_05_e/action_log.jsonl 
+  python validate.py --output 00_05_b/out/shopping_summary.json --snapshot 00_05_b/snapshot --action-log 00_05_b/action_log.jsonl 
 
 Notes:
 - If you pass --baseline, we validate against that exact snapshot file.
