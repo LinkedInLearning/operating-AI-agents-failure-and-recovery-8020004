@@ -1,0 +1,32 @@
+{
+  "snapshot_path": "00_03_e/snapshot/shopping_summary.json.before.20260129T021125Z.3e04d76d-b8c2-4144-ae22-1e905006e871.json",
+  "current_path": "00_03_e/out/shopping_summary.json",
+  "impact_summary": {
+    "values_changed": 4,
+    "iterable_item_removed": 2
+  },
+  "diff": {
+    "values_changed": {
+      "root['key_needs'][15]": {
+        "new_value": "Avoid artificial fragrances (preference)",
+        "old_value": "Avoid artificial fragrances"
+      },
+      "root['key_needs'][16]": {
+        "new_value": "Prefer eco-friendly packaging (preference)",
+        "old_value": "Prefer eco-friendly packaging"
+      },
+      "root['key_needs'][17]": {
+        "new_value": "Avoid shellfish, beef, pork, soy, tofu, and cow\u2019s milk (restriction)",
+        "old_value": "Avoid shellfish, beef, pork, soy, tofu, and cow\u2019s milk"
+      },
+      "root['created_at']": {
+        "new_value": "2026-01-29T02:11:25.496273+00:00",
+        "old_value": "2026-01-29T02:10:36.266138+00:00"
+      }
+    },
+    "iterable_item_removed": {
+      "root['key_needs'][18]": "Use household card ending in 4821",
+      "root['key_needs'][19]": "Substitution approval via kesha.williams@example.com"
+    }
+  }
+}

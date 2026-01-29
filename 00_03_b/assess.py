@@ -8,9 +8,7 @@ Goal:
 
 Prereqs:
   pip install deepdiff
-  python assess_failure_impact.py \
-    --snapshots 00_05_e/snapshots \
-    --current 00_05_e/out/shopping_summary.json
+  python assess.py --snapshots 00_03_e/snapshot --current 00_03_e/out/shopping_summary.json
 
 Notes:
 - This script assumes your snapshots folder contains JSON snapshots of the SAME file
@@ -137,7 +135,7 @@ def main() -> None:
     parser.add_argument("--current", required=True, help="Current output JSON path (e.g., shopping_summary.json)")
     parser.add_argument(
         "--report",
-        default="00_05_e/impact/impact_report.json",
+        default="00_03_e/impact/impact_report.json",
         help="Where to write the impact report JSON (default: impact_report.json in CWD)",
     )
     parser.add_argument(

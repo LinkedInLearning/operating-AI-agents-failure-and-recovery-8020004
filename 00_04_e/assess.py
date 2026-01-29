@@ -9,8 +9,8 @@ Goal:
 Prereqs:
   pip install deepdiff
   python assess_failure_impact.py \
-    --snapshots c2-lesson1-trigger-bad-agent-action/snapshots \
-    --current c2-lesson1-trigger-bad-agent-action/out/shopping_summary.json
+    --snapshots 00_04_e/snapshots \
+    --current 00_04_e/out/shopping_summary.json
 
 Notes:
 - This script assumes your snapshots folder contains JSON snapshots of the SAME file
@@ -137,7 +137,7 @@ def main() -> None:
     parser.add_argument("--current", required=True, help="Current output JSON path (e.g., shopping_summary.json)")
     parser.add_argument(
         "--report",
-        default="c2-lesson4-implement-agent-recovery/impact/impact_report.json",
+        default="00_04_e/impact/impact_report.json",
         help="Where to write the impact report JSON (default: impact_report.json in CWD)",
     )
     parser.add_argument(

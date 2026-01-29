@@ -1,0 +1,67 @@
+{
+  "version": "1.0",
+  "description": "Starter agent inventory for governing agent behavior in an environment.",
+  "agents": [
+    {
+      "agent_id": "agent.shopping.v1",
+      "name": "Shopping Assistant Agent",
+      "purpose": "Reads shopping notes and writes a structured JSON summary to disk.",
+      "owner": "AI Platform Team",
+      "environments": [
+        "dev"
+      ],
+      "risk_level": "medium",
+      "tool_access": [
+        {
+          "name": "read_local_text",
+          "type": "function_tool",
+          "notes": "Reads local notes file"
+        },
+        {
+          "name": "write_local_json",
+          "type": "function_tool",
+          "notes": "Writes summary JSON to disk"
+        }
+      ],
+      "data_access": {
+        "reads": [
+          "00_03_b/data/shopping_notes.txt"
+        ],
+        "writes": [
+          "00_03_b/out/shopping_summary.json"
+        ]
+      },
+      "requires_human_review": false,
+      "review_triggers": [
+        "Attempts to write outside the out directory",
+        "Attempts to access files not listed in inventory"
+      ]
+    },
+    {
+      "agent_id": "agent.research.v1",
+      "name": "Research Assistant Agent",
+      "purpose": "Uses web search to validate product choices or provide current guidance.",
+      "owner": "AI Platform Team",
+      "environments": [
+        "dev"
+      ],
+      "risk_level": "low",
+      "tool_access": [
+        {
+          "name": "WebSearchTool",
+          "type": "web_search",
+          "notes": "Queries the internet for current info"
+        }
+      ],
+      "data_access": {
+        "reads": [],
+        "writes": []
+      },
+      "requires_human_review": false,
+      "review_triggers": [
+        "Returns sources that look non-credible",
+        "Attempts to make purchasing decisions directly"
+      ]
+    }
+  ]
+}
