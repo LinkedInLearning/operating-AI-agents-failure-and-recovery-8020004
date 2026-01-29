@@ -8,9 +8,7 @@ Goal:
 
 Prereqs:
   pip install deepdiff
-  python assess_failure_impact.py \
-    --snapshots c2-lesson1-trigger-bad-agent-action/snapshots \
-    --current c2-lesson1-trigger-bad-agent-action/out/shopping_summary.json
+  python assess_failure_impact.py --snapshots 00_03_e/snapshots --current 00_03_e/out/shopping_summary.json
 
 Notes:
 - This script assumes your snapshots folder contains JSON snapshots of the SAME file

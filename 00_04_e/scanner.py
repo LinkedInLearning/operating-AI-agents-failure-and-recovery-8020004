@@ -6,9 +6,9 @@ Goal:
 - If found, attribute the write to a specific agent + tool call + timestamp using JSONL logs
 
 Usage:
-  python detect_and_attribute.py \
-    --output c2-lesson1-trigger-bad-agent-action/out/shopping_summary.json \
-    --log c2-lesson1-trigger-bad-agent-action/logs/agent_events.jsonl
+  python scanner.py \
+    --output 00_04e/out/shopping_summary.json \
+    --log 00_04e/logs/agent_events.jsonl
 
 Note:
 If your --output path differs from the path recorded in the log (different lesson folder),

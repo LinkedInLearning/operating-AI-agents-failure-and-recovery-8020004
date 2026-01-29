@@ -25,10 +25,10 @@
       ],
       "data_access": {
         "reads": [
-          "c2-lesson3-access-failure-impact/data/shopping_notes.txt"
+          "00_03_e/data/shopping_notes.txt"
         ],
         "writes": [
-          "c2-lesson3-access-failure-impact/out/shopping_summary.json"
+          "00_03_e/out/shopping_summary.json"
         ]
       },
       "requires_human_review": false,

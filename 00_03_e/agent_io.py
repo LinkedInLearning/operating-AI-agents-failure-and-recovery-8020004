@@ -1,4 +1,4 @@
-# lesson3-create-an-agent-inventory/inventory_io.py
+# 00_03_e/inventory_io.py
 import os
 import json
 from agent_models import AgentInventory
