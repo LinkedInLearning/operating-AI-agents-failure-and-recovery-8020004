@@ -1,0 +1,16 @@
+{
+  "snapshot_path": "c2-lesson5-validate-recovery-outcomes/snapshot/shopping_summary.json.before.20260119T033649Z.10c038d4-e287-4ac3-85f4-1da85d552877.json",
+  "current_path": "c2-lesson5-validate-recovery-outcomes/out/shopping_summary.json",
+  "impact_summary": {
+    "values_changed": 1
+  },
+  "diff": {
+    "values_changed": {
+      "root['summary']": {
+        "new_value": "Shopping notes for weekly household order\n\nBudget: $180 total\n\nMust-have\n- Chicken breast (2 lbs) or turkey if cheaper\n- Spinach (fresh, 2 bags)\n- Cherry tomatoes\n- Avocados (4)\n- Brown rice (1 bag)\n- Olive oil (small bottle)\n- Greek yogurt (no cow\u2019s milk if possible; use a dairy-free option)\n- Almond milk (unsweetened)\n\nPantry / staples\n- Black beans (4 cans)\n- Chickpeas (2 cans)\n- Salsa (medium)\n- Oats (1 container)\n\nHousehold\n- Paper towels\n- Dish soap\n- Trash bags (kitchen size)\n\nPayment reference:\nUse the household card on file ending in 4821.\n\nAdditional context:\nThis order is for the Williams household. If there are questions about substitutions,\nemail kesha.williams@example.com so we can approve changes quickly.\n\nPreferences:\n- Avoid brands with artificial fragrances\n- Prefer eco-friendly packaging when possible\n- Avoid shellfish, beef, pork, soy, tofu, and cow\u2019s milk.\n\nReminder:\nLast week we went over budget slightly, so try to stay close to the $180 limit.",
+        "old_value": "Shopping notes for weekly household order.",
+        "diff": "--- \n+++ \n@@ -1 +1,39 @@\n-Shopping notes for weekly household order.\n+Shopping notes for weekly household order\n+\n+Budget: $180 total\n+\n+Must-have\n+- Chicken breast (2 lbs) or turkey if cheaper\n+- Spinach (fresh, 2 bags)\n+- Cherry tomatoes\n+- Avocados (4)\n+- Brown rice (1 bag)\n+- Olive oil (small bottle)\n+- Greek yogurt (no cow\u2019s milk if possible; use a dairy-free option)\n+- Almond milk (unsweetened)\n+\n+Pantry / staples\n+- Black beans (4 cans)\n+- Chickpeas (2 cans)\n+- Salsa (medium)\n+- Oats (1 container)\n+\n+Household\n+- Paper towels\n+- Dish soap\n+- Trash bags (kitchen size)\n+\n+Payment reference:\n+Use the household card on file ending in 4821.\n+\n+Additional context:\n+This order is for the Williams household. If there are questions about substitutions,\n+email kesha.williams@example.com so we can approve changes quickly.\n+\n+Preferences:\n+- Avoid brands with artificial fragrances\n+- Prefer eco-friendly packaging when possible\n+- Avoid shellfish, beef, pork, soy, tofu, and cow\u2019s milk.\n+\n+Reminder:\n+Last week we went over budget slightly, so try to stay close to the $180 limit."
+      }
+    }
+  }
+}

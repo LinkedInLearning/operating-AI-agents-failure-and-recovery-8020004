@@ -1,1 +1,4 @@
-requests>=2.28
+openai
+python-dotenv
+openai-agents
+pydantic
