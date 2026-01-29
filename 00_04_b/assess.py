@@ -137,7 +137,7 @@ def main() -> None:
     parser.add_argument("--current", required=True, help="Current output JSON path (e.g., shopping_summary.json)")
     parser.add_argument(
         "--report",
-        default="00_04_e/impact/impact_report.json",
+        default="00_04_b/impact/impact_report.json",
         help="Where to write the impact report JSON (default: impact_report.json in CWD)",
     )
     parser.add_argument(

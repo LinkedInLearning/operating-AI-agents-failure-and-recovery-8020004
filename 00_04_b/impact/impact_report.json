@@ -1,6 +1,6 @@
 {
-  "snapshot_path": "00_04_e/snapshot/shopping_summary.json.before.20260129T205914Z.29b73124-5026-4d28-90f3-47a3572db2e7.json",
-  "current_path": "00_04_e/out/shopping_summary.json",
+  "snapshot_path": "00_04_b/snapshot/shopping_summary.json.before.20260129T205914Z.29b73124-5026-4d28-90f3-47a3572db2e7.json",
+  "current_path": "00_04_b/out/shopping_summary.json",
   "impact_summary": {
     "values_changed": 6,
     "iterable_item_added": 1

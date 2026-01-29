@@ -9,10 +9,10 @@ Goal:
 
 Usage:
   python rollback.py \
-    --output 00_04_e/out/shopping_summary.json \
-    --snapshots 00_04_e/snapshot \
-    --quarantine 00_04_e/quarantine \
-    --actionlog 00_04_e/action_log.jsonl
+    --output 00_04_b/out/shopping_summary.json \
+    --snapshots 00_04_b/snapshot \
+    --quarantine 00_04_b/quarantine \
+    --actionlog 00_04_b/action_log.jsonl
 
 Notes:
 - This is intentionally simple and file-based.
