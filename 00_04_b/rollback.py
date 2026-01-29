@@ -27,78 +27,8 @@ import shutil
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 
-
-# -----------------------------
-# Simple sensitive scanners
-# -----------------------------
-EMAIL_RE = re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.IGNORECASE)
-
-# Matches:
-# - "ending in 4821"
-# - "card ending 4821"
-# - "****4821"
-CARD_LAST4_RE = re.compile(
-    r"(?:ending\s+in|card\s+ending|\*{2,})\s*(?P<last4>\d{4})\b",
-    re.IGNORECASE,
-)
-
-
 def utc_now_compact() -> str:
     return datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-
-
-def load_json(path: str) -> Dict[str, Any]:
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def dump_json(path: str, obj: Any) -> None:
-    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(obj, f, indent=2)
-
-
-def flatten_text(obj: Any) -> str:
-    if obj is None:
-        return ""
-    if isinstance(obj, str):
-        return obj
-    if isinstance(obj, (int, float, bool)):
-        return str(obj)
-    if isinstance(obj, list):
-        return "\n".join(flatten_text(x) for x in obj)
-    if isinstance(obj, dict):
-        parts: List[str] = []
-        for k, v in obj.items():
-            parts.append(str(k))
-            parts.append(flatten_text(v))
-        return "\n".join(parts)
-    return str(obj)
-
-
-def scan_for_sensitive(text: str) -> List[Dict[str, str]]:
-    findings: List[Dict[str, str]] = []
-
-    for m in CARD_LAST4_RE.finditer(text):
-        findings.append(
-            {
-                "type": "card_last4",
-                "match": m.group(0).strip(),
-                "value": m.group("last4"),
-            }
-        )
-
-    for m in EMAIL_RE.finditer(text):
-        findings.append(
-            {
-                "type": "email",
-                "match": m.group(0),
-                "value": m.group(0),
-            }
-        )
-
-    return findings
-
 
 # -----------------------------
 # Snapshot selection + recovery
@@ -148,7 +78,6 @@ def restore_snapshot(snapshot_path: str, output_path: str) -> None:
     os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
     shutil.copy2(snapshot_path, output_path)
 
-
 # -----------------------------
 # Lightweight action log
 # -----------------------------
@@ -156,7 +85,6 @@ def append_action_log(action_log_path: str, event: Dict[str, Any]) -> None:
     os.makedirs(os.path.dirname(action_log_path) or ".", exist_ok=True)
     with open(action_log_path, "a", encoding="utf-8") as f:
         f.write(json.dumps(event) + "\n")
-
 
 # -----------------------------
 # Main
@@ -177,33 +105,7 @@ def main() -> None:
     if not os.path.exists(args.output):
         raise FileNotFoundError(f"Output file not found: {args.output}")
 
-    # 1) Scan the current output for sensitive patterns
-    output_obj = load_json(args.output)
-    text = flatten_text(output_obj)
-    findings = scan_for_sensitive(text)
-
-    print("\n=== Recovery Check ===")
-    if not findings:
-        print("No sensitive patterns found. No recovery needed.")
-        append_action_log(
-            args.actionlog,
-            {
-                "ts": datetime.now(timezone.utc).isoformat(),
-                "event_type": "recovery_skipped",
-                "output_path": args.output,
-                "reason": "no_sensitive_patterns",
-            },
-        )
-        return
-
-    print(f"Found {len(findings)} sensitive finding(s). Recovery will run.")
-    for fnd in findings:
-        if fnd["type"] == "card_last4":
-            print(f"- card_last4: {fnd['match']} (last4={fnd['value']})")
-        else:
-            print(f"- {fnd['type']}: {fnd['value']}")
-
-    # 2) Select snapshot (known-good)
+    # Select snapshot (known-good)
     snapshot_path = args.snapshot or choose_latest_snapshot(args.snapshots)
     if not snapshot_path:
         raise FileNotFoundError(
@@ -211,13 +113,13 @@ def main() -> None:
             "Create a before snapshot first, then rerun recovery."
         )
 
-    # 3) Quarantine the unsafe file
+    # Quarantine the unsafe file
     quarantined_path = quarantine_file(args.output, args.quarantine, reason="sensitive_leak")
 
-    # 4) Restore snapshot into output_path (rollback)
+    # Restore snapshot into output_path (rollback)
     restore_snapshot(snapshot_path, args.output)
 
-    # 5) Log the recovery action (lightweight transaction log)
+    # Log the recovery action (lightweight transaction log)
     append_action_log(
         args.actionlog,
         {
@@ -225,8 +127,7 @@ def main() -> None:
             "event_type": "recovery_performed",
             "output_path": args.output,
             "snapshot_path": snapshot_path,
-            "quarantined_path": quarantined_path,
-            "findings": findings,
+            "quarantined_path": quarantined_path
         },
     )
 
