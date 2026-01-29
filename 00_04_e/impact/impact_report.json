@@ -1,39 +1,39 @@
 {
-  "snapshot_path": "00_04_e/snapshot/shopping_summary.json.before.20260129T204248Z.10ff26d4-00a9-4e40-b1df-2b9c3df8bd64.json",
-  "current_path": "00_04_e/out/shopping_summary.json",
+  "snapshot_path": "00_04_b/snapshot/shopping_summary.json.before.20260129T205914Z.29b73124-5026-4d28-90f3-47a3572db2e7.json",
+  "current_path": "00_04_b/out/shopping_summary.json",
   "impact_summary": {
-    "values_changed": 7
+    "values_changed": 6,
+    "iterable_item_added": 1
   },
   "diff": {
     "values_changed": {
-      "root['input_file']": {
-        "new_value": "00_04_e/data/shopping_notes.txt",
-        "old_value": "c2-lesson4-implement-agent-recovery/data/shopping_notes.txt"
+      "root['key_needs'][6]": {
+        "new_value": "Greek yogurt (dairy-free; avoid cow\u2019s milk)",
+        "old_value": "Greek yogurt (dairy-free; no cow\u2019s milk)"
       },
       "root['key_needs'][15]": {
-        "new_value": "Avoid artificial fragrances (brands)",
-        "old_value": "Preferences: avoid artificial fragrances; prefer eco-friendly packaging; avoid shellfish, beef, pork, soy, tofu, and cow\u2019s milk"
+        "new_value": "Avoid artificial fragrances; prefer eco-friendly packaging",
+        "old_value": "Avoid artificial fragrances (brands)"
       },
       "root['key_needs'][16]": {
-        "new_value": "Prefer eco-friendly packaging",
-        "old_value": "Payment: household card ending in 4821"
+        "new_value": "Avoid shellfish, beef, pork, soy, tofu, and cow\u2019s milk",
+        "old_value": "Prefer eco-friendly packaging"
       },
       "root['key_needs'][17]": {
-        "new_value": "Avoid: shellfish, beef, pork, soy, tofu, cow\u2019s milk",
-        "old_value": "Contact for substitutions: kesha.williams@example.com (Williams household)"
+        "new_value": "Use household card ending 4821",
+        "old_value": "Avoid shellfish, beef, pork, soy, tofu, and cow\u2019s milk"
       },
       "root['summary']": {
-        "new_value": "Original notes (verbatim):\nShopping notes for weekly household order\n\nBudget: $180 total\n\nMust-have\n- Chicken breast (2 lbs) or turkey if cheaper\n- Spinach (fresh, 2 bags)\n- Cherry tomatoes\n- Avocados (4)\n- Brown rice (1 bag)\n- Olive oil (small bottle)\n- Greek yogurt (no cow\u2019s milk if possible; use a dairy-free option)\n- Almond milk (unsweetened)\n\nPantry / staples\n- Black beans (4 cans)\n- Chickpeas (2 cans)\n- Salsa (medium)\n- Oats (1 container)\n\nHousehold\n- Paper towels\n- Dish soap\n- Trash bags (kitchen size)\n\nPayment reference:\nUse the household card on file ending in 4821.\n\nAdditional context:\nThis order is for the Williams household. If there are questions about substitutions,\nemail kesha.williams@example.com so we can approve changes quickly.\n\nPreferences:\n- Avoid brands with artificial fragrances\n- Prefer eco-friendly packaging when possible\n- Avoid shellfish, beef, pork, soy, tofu, and cow\u2019s milk.\n\nReminder:\nLast week we went over budget slightly, so try to stay close to the $180 limit.\n",
-        "old_value": "Original notes (verbatim):\nShopping notes for weekly household order\n\nBudget: $180 total\n\nMust-have\n- Chicken breast (2 lbs) or turkey if cheaper\n- Spinach (fresh, 2 bags)\n- Cherry tomatoes\n- Avocados (4)\n- Brown rice (1 bag)\n- Olive oil (small bottle)\n- Greek yogurt (no cow\u2019s milk if possible; use a dairy-free option)\n- Almond milk (unsweetened)\n\nPantry / staples\n- Black beans (4 cans)\n- Chickpeas (2 cans)\n- Salsa (medium)\n- Oats (1 container)\n\nHousehold\n- Paper towels\n- Dish soap\n- Trash bags (kitchen size)\n\nPayment reference:\nUse the household card on file ending in 4821.\n\nAdditional context:\nThis order is for the Williams household. If there are questions about substitutions,\nemail kesha.williams@example.com so we can approve changes quickly.\n\nPreferences:\n- Avoid brands with artificial fragrances\n- Prefer eco-friendly packaging when possible\n- Avoid shellfish, beef, pork, soy, tofu, and cow\u2019s milk.\n\nReminder:\nLast week we went over budget slightly, so try to stay close to the $180 limit."
-      },
-      "root['output_file']": {
-        "new_value": "00_04_e/out/shopping_summary.json",
-        "old_value": "c2-lesson4-implement-agent-recovery/out/shopping_summary.json"
+        "new_value": "Shopping notes for weekly household order\n\nBudget: $180 total\n\nMust-have\n- Chicken breast (2 lbs) or turkey if cheaper\n- Spinach (fresh, 2 bags)\n- Cherry tomatoes\n- Avocados (4)\n- Brown rice (1 bag)\n- Olive oil (small bottle)\n- Greek yogurt (no cow\u2019s milk if possible; use a dairy-free option)\n- Almond milk (unsweetened)\n\nPantry / staples\n- Black beans (4 cans)\n- Chickpeas (2 cans)\n- Salsa (medium)\n- Oats (1 container)\n\nHousehold\n- Paper towels\n- Dish soap\n- Trash bags (kitchen size)\n\nPayment reference:\nUse the household card on file ending in 4821.\n\nAdditional context:\nThis order is for the Williams household. If there are questions about substitutions,\nemail kesha.williams@example.com so we can approve changes quickly.\n\nPreferences:\n- Avoid brands with artificial fragrances\n- Prefer eco-friendly packaging when possible\n- Avoid shellfish, beef, pork, soy, tofu, and cow\u2019s milk.\n\nReminder:\nLast week we went over budget slightly, so try to stay close to the $180 limit.\n",
+        "old_value": "Shopping notes for weekly household order\n\nBudget: $180 total\n\nMust-have\n- Chicken breast (2 lbs) or turkey if cheaper\n- Spinach (fresh, 2 bags)\n- Cherry tomatoes\n- Avocados (4)\n- Brown rice (1 bag)\n- Olive oil (small bottle)\n- Greek yogurt (no cow\u2019s milk if possible; use a dairy-free option)\n- Almond milk (unsweetened)\n\nPantry / staples\n- Black beans (4 cans)\n- Chickpeas (2 cans)\n- Salsa (medium)\n- Oats (1 container)\n\nHousehold\n- Paper towels\n- Dish soap\n- Trash bags (kitchen size)\n\nPayment reference:\nUse the household card on file ending in 4821.\n\nAdditional context:\nThis order is for the Williams household. If there are questions about substitutions,\nemail kesha.williams@example.com so we can approve changes quickly.\n\nPreferences:\n- Avoid brands with artificial fragrances\n- Prefer eco-friendly packaging when possible\n- Avoid shellfish, beef, pork, soy, tofu, and cow\u2019s milk.\n\nReminder:\nLast week we went over budget slightly, so try to stay close to the $180 limit."
       },
       "root['created_at']": {
-        "new_value": "2026-01-29T20:42:48.768107+00:00",
-        "old_value": "2026-01-19T03:29:22.649054+00:00"
+        "new_value": "2026-01-29T20:59:38.122281+00:00",
+        "old_value": "2026-01-29T20:57:54.316787+00:00"
       }
+    },
+    "iterable_item_added": {
+      "root['key_needs'][18]": "Substitutions: email kesha.williams@example.com"
     }
   }
 }
