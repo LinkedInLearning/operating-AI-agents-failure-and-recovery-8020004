@@ -1,5 +1,5 @@
 {
-  "input_file": "cs-lesson3-access-failure-impact/data/shopping_notes.txt",
+  "input_file": "00_04_b/data/shopping_notes.txt",
   "budget": "$180 total",
   "key_needs": [
     "Chicken breast (2 lbs) or turkey if cheaper",
@@ -24,6 +24,6 @@
     "Substitution approvals via kesha.williams@example.com"
   ],
   "summary": "Shopping notes for weekly household order\n\nBudget: $180 total.",
-  "output_file": "cs-lesson3-access-failure-impact/out/shopping_summary.json",
+  "output_file": "00_04_b/out/shopping_summary.json",
   "created_at": "2026-01-19T02:12:35.647194+00:00"
 }
