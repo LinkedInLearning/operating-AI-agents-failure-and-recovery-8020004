@@ -65,15 +65,14 @@ def most_recent_snapshot(snapshot_dir: str, output_filename: str) -> Optional[st
 # ---------------------------------------------------------------------------
 # Integrity checks
 # ---------------------------------------------------------------------------
-REQUIRED_TOP_LEVEL_FIELDS = [
-    "input_file",
-    "budget",
-    "key_needs",
-    "summary",
-    "output_file",
-    "created_at",
-]
-
+#TODO Validate the schema of the recovered file matches what the system expects:
+# class AgentSummaryOutput(BaseModel):
+#     input_file: str
+#     budget: Optional[str]
+#     key_needs: List[str]
+#     summary: str
+#     output_file: str
+#     created_at: str
 
 def validate_schema(obj: Dict[str, Any]) -> List[str]:
     issues: List[str] = []
@@ -126,7 +125,7 @@ def validate_recovery_logged(
     ]
 
     if not candidates:
-        issues.append("No recovery_performed event found in action log for this output_path.")
+        #TODO: Append an item to issues if no rollback event found in the log
         return issues
 
     candidates.sort(key=lambda e: str(e.get("ts", "")), reverse=True)
