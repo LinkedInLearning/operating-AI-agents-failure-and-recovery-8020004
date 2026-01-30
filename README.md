@@ -3,34 +3,36 @@ This is the repository for the LinkedIn Learning course `Operating AI Agents: Fa
 
 ![course-name-alt-text][lil-thumbnail-url] 
 
-_See the readme file in the main branch for updated instructions and information._
-## Instructions
-This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
+## Notes
+- This course, Operating AI Agents: Failure and Recovery, is the second course in the governing AI agents series. The first course is [Governing AI Agents: Visibility and Control](https://www.linkedin.com/learning/hands-on-ai-governing-ai-agents-in-practice).
 
-## Branches
-The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
-Some branches will have a beginning and an end state. These are marked with the letters `b` for "beginning" and `e` for "end". The `b` branch contains the code as it is at the beginning of the movie. The `e` branch contains the code as it is at the end of the movie. The `main` branch holds the final state of the code when in the course.
+## Requirements
+- Python 3.9+
+- An [OpenAI API key](https://platform.openai.com/account/api-keys)
 
-When switching from one exercise files branch to the next after making changes to the files, you may get a message like this:
+## Setup
 
-    error: Your local changes to the following files would be overwritten by checkout:        [files]
-    Please commit your changes or stash them before you switch branches.
-    Aborting
+1. **Clone this repo** (or download the files).
+2. **Create and activate a virtual environment**:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate   # macOS/Linux
+    venv\Scripts\activate      # Windows
+    ```
+3. **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. **Set your OpenAI API key or place in .env file**:
+    ```bash
+    export OPENAI_API_KEY="your_api_key"      # macOS/Linux
+    setx OPENAI_API_KEY "your_api_key"        # Windows PowerShell
+    ```
 
-To resolve this issue:
-	
-    Add changes to git using this command: git add .
-	Commit changes using this command: git commit -m "some message"
+## Instructor
 
-## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+Kesha Williams
 
+Award-Winning Tech Innovator and AI/ML Leader
 
-[0]: # (Replace these placeholder URLs with actual course URLs)
-
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG0eDHsyOSqTA/learning-public-crop_675_1200/B4EZVdqqdwHUAY-/0/1741033220778?e=2147483647&v=beta&t=FxUDo6FA8W8CiFROwqfZKL_mzQhYx9loYLfjN-LNjgA
 
