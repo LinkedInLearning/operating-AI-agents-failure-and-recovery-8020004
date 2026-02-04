@@ -1,11 +1,36 @@
-Copyright 2025 LinkedIn Corporation
+Copyright 2026 LinkedIn Corporation
 All Rights Reserved.
 
 Licensed under the LinkedIn Learning Exercise File License (the "License").
 See LICENSE in the project root for license information.
 
 ATTRIBUTIONS:
-[PLEASE PROVIDE ATTRIBUTIONS OR DELETE THIS AND THE ABOVE LINE “ATTRIBUTIONS”]
+
+python-dotenv
+https://github.com/theskumar/python-dotenv
+License: BSD-3-Clause
+https://opensource.org/licenses/BSD-3-Clause
+
+openai
+https://github.com/openai/openai-python
+License: Apache-2.0
+http://www.apache.org/licenses/
+
+pydantic
+https://github.com/pydantic/pydantic
+License: MIT
+https://opensource.org/licenses/MIT
+
+deepdiff
+https://github.com/seperman/deepdiff
+License: MIT
+https://opensource.org/licenses/MIT
+
+openai-agents
+https://github.com/openai/openai-agents-python
+License: Apache-2.0
+http://www.apache.org/licenses/
+
 
 Please note, this project may automatically load third party code from external 
 repositories (for example, NPM modules, Composer packages, or other dependencies). 
