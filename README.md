@@ -1,5 +1,5 @@
 # Operating AI Agents: Failure and Recovery
-This is the repository for the LinkedIn Learning course `Operating AI Agents: Failure and Recovery`. The full course is available from [LinkedIn Learning][lil-course-url].
+This is the repository for the LinkedIn Learning course `Operating AI Agents: Failure and Recovery`. The full course is available from [LinkedIn Learning](https://www.linkedin.com/learning/operating-ai-agents-failure-and-recovery/).
 
 ![course-name-alt-text][lil-thumbnail-url] 
 
